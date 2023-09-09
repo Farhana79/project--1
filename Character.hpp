@@ -4,7 +4,6 @@
 // project 1
 
 
-
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
@@ -16,28 +15,28 @@ public:
     enum Race { NONE, HUMAN, ELF, DWARF, LIZARD, UNDEAD };
 
     // Constructors
-    Character(); // Default constructor
-    Character(const std::string& name, Race race, int vitality = 0, int armor = 0, int level = 0, bool isEnemy = false);
+    Character()=defailt; // Default constructor
+    Character(std::string name, std::string race, int vitality = 0, int armor = 0, int level = 0, bool isEnemy = false);
 
     // Accessor functions
     std::string getName() const;
-    Race getRace() const;
+    std::string getRace() const;
     int getVitality() const;
     int getArmor() const;
     int getLevel() const;
     bool isEnemy() const;
 
     // Mutator functions
-    void setName(const std::string& name);
-    void setRace(Race race);
-    void setVitality(int vitality);
-    void setArmor(int armor);
-    void setLevel(int level);
+    void setName(const std::string &name);
+    void setRace(const std::string &race);
+    void setVitality(const int &vitality);
+    void setArmor(const int &armor);
+    void setLevel(const int &level);
     void setEnemy();
 
 private:
     std::string name_;
-    Race race_;
+    std::string race_;
     int vitality_;
     int armor_;
     int level_;
