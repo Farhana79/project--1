@@ -3,8 +3,6 @@
 // Csci 235
 // project 1
 
-
-
 #include "Character.hpp"
 
 // Default constructor
@@ -12,7 +10,7 @@ Character::Character()
     : name_("NAMELESS"), race_(NONE), vitality_(0), maxArmor_(0), level_(0), isEnemy_(false) {}
 
 // Parameterized constructor
-Character::Character(const std::string& name, Race race, int vitality, int maxArmor, int level, bool isEnemy)
+Character::Character(std::string name, std::string race, int vitality, int maxArmor, int level, bool isEnemy)
     : name_(name), race_(race), vitality_(vitality), maxArmor_(maxArmor), level_(level), isEnemy_(isEnemy) {}
 
 // Accessor functions
@@ -20,7 +18,7 @@ std::string Character::getName() const {
     return name_;
 }
 
-Character::Race Character::getRace() const {
+std::string Character::getRace() const {
     return race_;
 }
 
@@ -41,7 +39,7 @@ bool Character::isEnemy() const {
 }
 
 // Mutator functions
-void Character::setName(const std::string& name) {
+void Character::setName(const std::string &name) {
     // Ensure the name consists of only alphabetical characters
     std::string updatedName;
     for (char c : name) {
@@ -58,7 +56,7 @@ void Character::setName(const std::string& name) {
     }
 }
 
-void Character::setRace(Race race) {
+void Character::setRace(std::string &race) {
     race_ = race;
 }
 
