@@ -27,11 +27,11 @@ public:
     bool isEnemy() const;
 
     // Mutator functions
-    void setName(const std::string &name);
-    void setRace(const std::string &race);
-    void setVitality(const int &vitality);
-    void setArmor(const int &armor);
-    void setLevel(const int &level);
+    void setName(const std::string& name);
+    void setRace(const std::string& race);
+    void setVitality(const int& vitality);
+    void setArmor(const int& armor);
+    void setLevel(const int& level);
     void setEnemy();
 
 private:
