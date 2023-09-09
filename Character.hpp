@@ -15,7 +15,7 @@ public:
     enum Race { NONE, HUMAN, ELF, DWARF, LIZARD, UNDEAD };
 
     // Constructors
-    Character()=defailt; // Default constructor
+    Character()=default; // Default constructor
     Character(std::string name, std::string race, int vitality = 0, int armor = 0, int level = 0, bool isEnemy = false);
 
     // Accessor functions
