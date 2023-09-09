@@ -39,7 +39,7 @@ bool Character::isEnemy() const {
 }
 
 // Mutator functions
-void Character::setName(const std::string &name) {
+void Character::setName(const std::string& name) {
     // Ensure the name consists of only alphabetical characters
     std::string updatedName;
     for (char c : name) {
@@ -56,23 +56,23 @@ void Character::setName(const std::string &name) {
     }
 }
 
-void Character::setRace(std::string &race) {
+void Character::setRace(const std::string& race) {
     race_ = race;
 }
 
-void Character::setVitality(int vitality) {
+void Character::setVitality(const int& vitality) {
     if (vitality >= 0) {
         vitality_ = vitality;
     }
 }
 
-void Character::setArmor(int maxArmor) {
+void Character::setArmor(const int& maxArmor) {
     if (maxArmor >= 0) {
         maxArmor_ = maxArmor;
     }
 }
 
-void Character::setLevel(int level) {
+void Character::setLevel(const int& level) {
     if (level >= 0) {
         level_ = level;
     }
