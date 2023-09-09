@@ -41,18 +41,18 @@ bool Character::isEnemy() const {
 // Mutator functions
 void Character::setName(const std::string& name) {
     // Ensure the name consists of only alphabetical characters
-    std::string updatedName;
+    std::string uppercaseName;
     for (char c : name) {
         if (isalpha(c)) {
-            updatedName += toupper(c);
+            uppercaseName += toupper(c);
         }
     }
 
     // If no valid alphabetical characters found, set the name to "NAMELESS"
-    if (updatedName.empty()) {
-        name_ = "NAMELESS";
+    if (!uppercaseName.empty()) {
+        name_ = uppercaseName;
     } else {
-        name_ = updatedName;
+        name_ = "NAMELESS";
     }
 }
 
