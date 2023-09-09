@@ -38,7 +38,7 @@ private:
     std::string name_;
     std::string race_;
     int vitality_;
-    int armor_;
+    int maxArmor_;
     int level_;
     bool isEnemy_;
 };
